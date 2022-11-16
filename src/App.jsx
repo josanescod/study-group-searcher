@@ -1,8 +1,9 @@
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { FaDiscord } from 'react-icons/fa';
 
 import Search from './components/Search';
 import List from './components/List';
+import Footer from './components/Footer';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -27,12 +28,13 @@ function App() {
 
   //fetchData()
   useEffect(() => {
-    fetchData();  
+    fetchData();
   }, []);
 
 
   return (
     <div className="grid place-items-center">
+     
       {/*<p className="text-4xl font-bold underline text-blue-600 decoration-orange-200 mt-24">
         study group searcher
       </p>*/}
@@ -40,11 +42,13 @@ function App() {
       {/*<label className="mt-5 mb-5" htmlFor="search"><span className="text-2xl">Asignatura: </span></label>
       <input id="search" type="text" />*/}
       <Search onSearch={handleSearch} search={searchTerm} />
-      <br />      
+      <br />
       <List list={searchedStories} />
       {/*<button onClick={fetchData} className="mt-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
         Button
     </button>*/}
+      <br />
+      <Footer />
     </div>
   );
 }
