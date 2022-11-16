@@ -1,16 +1,14 @@
 
 
-
 const Footer = () => {
-    const year = new Date().getFullYear();
-   
-
+    const year = new Date().getFullYear();  
     return (
-        <div className="text-slate-400">
-            <p>{year}</p>
+        <div className="card-footer">
+            <div className="container has-text-centered">
+                <p className="has-text-grey is-size-7">{year}</p>
+            </div>            
         </div>
     );
 };
-
 
 export default Footer;
