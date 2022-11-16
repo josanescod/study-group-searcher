@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { FaDiscord } from 'react-icons/fa';
 
 import Search from './components/Search';
@@ -25,7 +25,10 @@ function App() {
   const searchedStories = data.filter((story) =>
     story.title.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(searchTerm.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase()));
 
-    fetchData()
+  //fetchData()
+  useEffect(() => {
+    fetchData();  
+  }, []);
 
 
   return (
@@ -42,7 +45,6 @@ function App() {
       {/*<button onClick={fetchData} className="mt-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
         Button
     </button>*/}
-
     </div>
   );
 }
