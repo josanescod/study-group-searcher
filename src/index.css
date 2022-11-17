@@ -17,3 +17,14 @@ table * {
   border: none !important
 }
 
+.light-theme {
+  background-color: white;
+ 
+  
+}
+
+
+.dark-theme {
+  background-color: #363636;
+
+}
