@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div className="card-footer">
             <div className="container has-text-centered">
-                <p className="has-text-grey is-size-7">{year}</p>
+                <p className="has-text-grey is-size-6">{year}</p>
             </div>            
         </div>
     );

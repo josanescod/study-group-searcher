@@ -4,7 +4,7 @@ const Search = (props) => {
 
     return (
               <div className="has-text-centered">        
-                <input className="mt-1" id="search" type="text" placeholder="Asignatura" autoComplete="off" onChange={onSearch} value={search} />
+                <input className="mt-1 mb-2" id="search" type="text" placeholder="Asignatura" autoComplete="off" onChange={onSearch} value={search} />
               </div>            
     )       
 };
