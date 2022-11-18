@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import 'bulma/css/bulma.css';
 
 import Search from './components/Search';
 import List from './components/List';
@@ -7,7 +6,7 @@ import Footer from './components/Footer';
 import ToogleTheme from './components/ToogleTheme';
 
 function App() {
-  const html = document.querySelector('html')
+  const html = document.querySelector('html');
   const [searchTerm, setSearchTerm] = useState('');
   const [data, setData] = useState([]);
   const [active, setActive] = useState(true);
@@ -33,7 +32,7 @@ function App() {
     fetchData();
   }, []);
 
-  const handleChangeActive = () => {    
+  const handleChangeActive = () => {
     active ? (
       setActive(false),
       setTheme('dark-theme'),
@@ -68,7 +67,6 @@ function App() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }
